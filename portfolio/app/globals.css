@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  max-width: 1600px;
+  margin: auto;
+  padding: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    padding: 2rem 5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    padding: 2rem 10rem;
+  }
+}
+ 
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body, nav {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
